@@ -9,22 +9,7 @@ Project
             several mods held in respective directories ModName.
 
         Can maybe have some different *views* that could be used.
-            Basic view -> just a round square that holds the mod name and 
-            character icon. Maybe color it based on some pull from assets?
-
-            Character Wheel --> char idle animations with columns like this:
-
-                    |  |           |  |
-                    |  |           |  |
-                    |  |           |  |
-                    |  |           |  |
-                    |  |           |  |
-                    |  |           |  |
-                    |  |           |  |
-                     \ |           | /
-                      \|___________|/
-
-            Grid View  --> char icons
+            Basic view -> looks like song select within FNF
                         
         REACT APP 
             Displays Mods from library and allows user to interact

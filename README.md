@@ -15,9 +15,7 @@ Project
             Displays Mods from library and allows user to interact
             with them
 
-            STATE
-                Mode:
-                    Grid --> Gets icons, displays in box fitted to screen
+            Move up and down thru menu using arrow keys like game
 
             
         COMPONENTS
@@ -27,6 +25,23 @@ Project
                     the app sets it at.
 
                     Passed props from app that manages state.
+
+            Font
+                Uses Sprite component to interact with alphabet.png and extract
+                characters from font page.
+
+                    - Should separate text creating component into new
+                        js file.
+
+            Icon
+                Uses Sprite component to interact with icons with projects and 
+                extract from page.
+
+            Sprite
+                Uses Canvas Component and loads image once canvas is set up.
+
+            Canvas
+                Creates an HTML canvas element using React States.
 
             
             

@@ -1,14 +1,13 @@
 import Sprite from 'Sprite'
 
+function init(ctx) {
+
+}
+
 const Icon = (props) => {
     return (
-        <Sprite />
+        <Sprite imagePath={imageSheet} init={init}/>
     )
-    React.useEffect(() => {
-        // Runs after the first render() lifecycle
-        let canvas = document.querySelector('canvas');
-        let ctx = canvas.getContext('2d');
-      }, []);
     
 };
 

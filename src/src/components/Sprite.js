@@ -1,18 +1,30 @@
-function init() {
-    // future animation code goes here
+import Canvas from './Canvas'
+
+import React, {Component} from 'react';
+
+const draw = (ctx) => {
+    ctx.drawImage(img, 
+        props.sx, props.sy, props.sWidth, props.sHeight, 
+        0, 0, canvas.width, canvas.height
+    )
 }
 
 const Sprite = (props) => {
-    let img = new Image();
-    img.src = props.imagePath
-    img.onload = function() {
-        init();
-    };
-
     return (
-        <canvas width="50" height="50"></canvas>
-    );
+        <Canvas draw={} height={50} width={50} />
+    )
 
+    React.useEffect(() => {
+        // Runs after the first render() lifecycle
+        let canvas = document.querySelector('canvas');
+        let ctx = canvas.getContext('2d');
+
+        let img = new Image();
+        img.src = props.imagePath
+        img.onload = function() {
+            
+        };
+      }, []);
 }
 
 export default Sprite;

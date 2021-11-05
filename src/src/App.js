@@ -1,22 +1,25 @@
 import './App.css';
 
+import Font from './components/Font'
+
+const root = "../../../projects"
+const icons = "assets/images/icons"
+
+const fs = require("fs");
+
+// fs.readdir(root, (err, files) => {
+//   files.forEach(file => {
+//     console.log(file);
+//   });
+// });
+
 function App() {
+  /*
+    Should display all mods in the project folder with an icon from the game and the directory name.
+  */
   return (
     <div className="App">
-      <header className="App-header">
-
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Font/>
     </div>
   );
 }

@@ -1,23 +1,34 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import useCanvas from './useCanvas'
 
-const Canvas = ({draw, height, width}) => {
-  const canvas = React.useRef();
+/*
+  React canvas component 
 
-  React.useEffect(() => {
-    const context = canvas.current.getContext('2d');
-    draw(context);
-  });
+  props
+    draw
+    predraw
+    postdraw
+    image
+    height
+    width
 
-  return (
-    <canvas ref={canvas} height={height} width={width} />
-  );
-};
+  options
 
-Canvas.propTypes = {
-  draw: PropTypes.func.isRequired,
-  height: PropTypes.number.isRequired,
-  width: PropTypes.number.isRequired,
-};
 
-export default Canvas;
+*/
+
+const Canvas = props => {  
+  const { draw=props.draw, predraw=props.predraw, postdraw=props.postdraw, ...rest } = props;
+
+  const options = {
+    predraw: predraw,
+    postdraw: postdraw,
+    img: rest.image
+  }
+  
+  const canvasRef = useCanvas(draw, options)
+
+  return <canvas ref={canvasRef} height={props.height} width={props.width}/>
+}
+
+export default Canvas
